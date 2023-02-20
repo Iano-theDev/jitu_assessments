@@ -1,0 +1,29 @@
+<h2>Add Student</h2>
+<form>
+  <label>
+    Name:
+    <input type="text"  name="name" id="name" required #stdName>
+  </label>
+  <label>
+    StudentId:
+    <input type="text"  name="studentID" id="std-id" required #stdId>
+  </label>
+  <label>
+    Balance:
+    <input type="text"  name="balance" id="balance" required #stdBalance>
+  </label>
+  <button (click)="studentDetails(stdName.value, stdId.value, stdBalance.value)">Add</button>
+</form>
+
+<h3>Students</h3>
+<div class="students-container">
+  <div class="studentDiv" *ngFor="let newStudent of studentsArray">
+    <h4>Name: {{newStudent.Name}}</h4>
+    <p>ID: {{newStudent.StudentId}}</p>
+    <p>Balance: {{newStudent.Balance}}</p>
+    <div class="btn-container">
+      <button id="update">Update</button>
+      <button id="delete">Delete</button>
+    </div>
+  </div>
+</div>
