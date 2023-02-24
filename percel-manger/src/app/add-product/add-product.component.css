@@ -1,0 +1,56 @@
+.container {
+    width: 50%;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    margin-left:25% ;
+    margin-top: 8%;
+    padding: 1em;
+}
+
+form, label { 
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+form {
+    margin: 2em;
+}
+
+form
+input[type=text],
+input[type=email],
+input[type=submit],
+select{
+    height: 3em;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+button {
+    height: 3em;
+    width: 50%;
+    border: .1px solid black;
+    align-self: center;
+    background:rgba(59, 59, 59, 0.3);
+    border: none;
+    border-radius: 4px;
+    transition: ease .5s;
+}
+
+button:hover {
+    background-color: black;
+    color: aliceblue;
+}
+
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+}
+
+input.ng-valid.ng-touched{
+    border: 1px solid rgb(68, 227, 68);
+}
+
+.invalid-entry {
+    color: red;
+}

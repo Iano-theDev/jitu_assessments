@@ -1,0 +1,22 @@
+<div class="container">
+    <form ngSubmit="submitForm(form)" #form="ngForm">
+        <h2> Enter Percel Owner Details</h2>
+        <div class="formGroup">
+            <label for="name">Name</label>
+            <input type="text" name="name" ngModel required #name="ngModel">
+            <span class="invalid-entry" *ngIf="name.invalid && name.touched">This fiels cant be empty</span>
+        </div>
+        <div class="formGroup">
+            <label for="name">Email</label>
+            <input type="email" name="email" ngModel required email pattern="^[a-zA-Z0-9._%+-]+@travel\.com$" #email="ngModel">
+            <span *ngIf="email.invalid && email.touched" class="invalid-entry">Please enter a valid email address</span>
+        </div>
+        <div class="formGroup">
+            <label for="destination">Destination</label>
+            <input type="text" name="destination" ngModel required>
+        </div>
+        <div>
+            <button type="submit" (click)="submitForm(form)" [disabled]="form.invalid">submit</button>
+        </div>
+    </form>
+</div>
