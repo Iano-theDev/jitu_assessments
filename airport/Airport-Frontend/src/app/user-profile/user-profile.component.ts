@@ -12,18 +12,24 @@ import { FormsModule, NgModel } from '@angular/forms';
 })
 export class UserProfileComponent{
 
-  // userName = this.auth.getName;
-
-
-
   show=false
+  userName = this.auth.getName()
+
+  role = this.auth.getRole()
 
   constructor(public auth:AuthService){}
 
-  userName = this.auth.getName()
-
   confirmUpdate(){
     this.show=!this.show
+    this.auth.setName(this.userName)
+    this.auth.setRole(this.role)
+    
+  }
+
+  cancelUpdate(){
+    this.show=!this.show
+    this.userName
+    this.role
   }
 
 

@@ -2,16 +2,26 @@
     <div class="welcome">
         <h1>Welcome</h1>
     </div>
-    <div class="user-name">
-        <p>{{userName}}</p>
-        <input type="text">
+    <div class="message" *ngIf="!auth.isLoggedIn">
+        <p>Please register or log in to view your profile</p>
     </div>
-    <div class="user-email">
-        <p>{{auth.getEmail()}}</p>
-    </div>
-    <div class="btn-container">
-        <button class="btn update" (click)="confirmUpdate()" [ngClass]="{close:show}">{{!show? 'Update user-name': 'Confirm'}}</button>
-        <button class="btn cancel" *ngIf="show">Cancel</button>
+    <div class="profile-info" *ngIf="auth.isLoggedIn">
+        <div class="user-name">
+            <h3>UserName:</h3>
+            <hr>
+            <p *ngIf="!show">{{userName}}</p>
+            <input  *ngIf="show" type="text" [(ngModel)]="userName">
+        </div>
+        <div class="user-role">
+            <h3>Role:</h3>
+            <hr>
+            <p *ngIf="!show">{{role}}</p>
+            <input  *ngIf="show" type="text" [(ngModel)]="role">
+        </div>
+        <div class="btn-container">
+            <button class="btn update" (click)="confirmUpdate()" [ngClass]="{close:show}">{{!show? 'Update Profile': 'Confirm'}}</button>
+            <button class="btn cancel" *ngIf="show" (click)="cancelUpdate()">Cancel</button>
+        </div>
     </div>
     
 </div>

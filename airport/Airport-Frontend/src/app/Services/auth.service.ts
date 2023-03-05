@@ -21,7 +21,6 @@ export class AuthService {
     return this.email
   }
 
-
   getRole(){
     return this.role
     }

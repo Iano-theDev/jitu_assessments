@@ -30,6 +30,19 @@
     transition: .5s ease;
 }
 
+.user-name,
+.user-email > input {
+    border: none;
+}
+
+.message
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 300;
+
+}
+
 .update {
     background: rgb(27, 24, 127);
     color: #FFF;
@@ -41,12 +54,12 @@
 }
 
 .cancel{
-    background: rgb(85, 84, 160);
+    background: rgb(180, 91, 101);
     color: #FFF;
 }
 
 .cancel:hover{
-    background: rgb(53, 51, 198);
+    background: rgb(198, 51, 76);
     color: #FFF;
 }
 
