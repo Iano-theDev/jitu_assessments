@@ -16,7 +16,7 @@ export class AuthService {
   return this.name
   }
 
-getRole(){
+  getRole(){
     return this.role
     }
 
