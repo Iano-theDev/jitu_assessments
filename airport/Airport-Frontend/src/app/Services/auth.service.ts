@@ -10,11 +10,17 @@ export class AuthService {
   isLoggedIn=false
   private role=''
   private name=''
+  private email = ''
 
 
   getName(){
   return this.name
   }
+
+  getEmail(){
+    return this.email
+  }
+
 
   getRole(){
     return this.role

@@ -3,10 +3,11 @@
         <h1>Welcome</h1>
     </div>
     <div class="user-name">
-        <p>{{auth.getName()}}</p>
+        <p>{{userName}}</p>
+        <input type="text">
     </div>
     <div class="user-email">
-        <p>sinceianmike@gmail.com</p>
+        <p>{{auth.getEmail()}}</p>
     </div>
     <div class="btn-container">
         <button class="btn update" (click)="confirmUpdate()" [ngClass]="{close:show}">{{!show? 'Update user-name': 'Confirm'}}</button>
