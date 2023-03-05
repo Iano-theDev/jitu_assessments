@@ -1,1 +1,16 @@
-<p>user-profile works!</p>
+<div class="container">
+    <div class="welcome">
+        <h1>Welcome</h1>
+    </div>
+    <div class="user-name">
+        <p>{{auth.getName()}}</p>
+    </div>
+    <div class="user-email">
+        <p>sinceianmike@gmail.com</p>
+    </div>
+    <div class="btn-container">
+        <button class="btn update" (click)="confirmUpdate()" [ngClass]="{close:show}">{{!show? 'Update user-name': 'Confirm'}}</button>
+        <button class="btn cancel" *ngIf="show">Cancel</button>
+    </div>
+    
+</div>

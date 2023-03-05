@@ -7,6 +7,7 @@ const routes: Routes = [
   {path:'register', loadComponent:()=>import('./Auth/register/register.component').then(c=>c.RegisterComponent)},
   {path:'login',  loadComponent:()=>import('./Auth/login/login.component').then(c=>c.LoginComponent)},
   {path:'book',  loadComponent:()=>import('./Bookings/booking/booking.component').then(c=>c.BookingComponent)},
+  {path: 'user-profile', loadComponent: ()=>import('./user-profile/user-profile.component').then(c=>c.UserProfileComponent)},
   {path:'book/:id', canActivate:[AuthGuardService], loadComponent:()=>import('./Bookings/single-booking/single-booking.component').then(c=>c.SingleBookingComponent)},
   {path:'book/:id/edit', canActivate:[AuthGuardService], loadComponent:()=>import('./Bookings/update-booking/update-booking.component').then(c=>c.UpdateBookingComponent)},
   {path:'**', loadComponent:()=>import('./page-not-found/page-not-found.component').then(c=>c.PageNotFoundComponent)}

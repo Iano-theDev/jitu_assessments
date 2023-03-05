@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    padding: 1em;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    margin-top: 3em;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.btn {
+    /* width: 100%; */
+    height: 2em;
+    padding: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: .3em;
+    gap: .5em;
+    transition: .5s ease;
+}
+
+.update {
+    background: rgb(27, 24, 127);
+    color: #FFF;
+}
+
+.update:hover{
+    background: rgb(73, 70, 179);
+    color: #FFF;
+}
+
+.cancel{
+    background: rgb(85, 84, 160);
+    color: #FFF;
+}
+
+.cancel:hover{
+    background: rgb(53, 51, 198);
+    color: #FFF;
+}
+
+
+

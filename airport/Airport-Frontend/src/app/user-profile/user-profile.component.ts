@@ -10,4 +10,10 @@ import { CommonModule } from '@angular/common';
 })
 export class UserProfileComponent {
 
+  show=false
+
+  confirmUpdate(){
+    this.show=!this.show
+  }
+
 }
